@@ -6,7 +6,7 @@
     <string>Downloads and imports the latest version of the Sookasa
 client software via the homepage download link.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.munki.sookasa</string>
+    <string>com.github.autopkg.munki.Sookasa</string>
     <key>Input</key>
     <dict>
         <key>MUNKI_REPO_SUBDIR</key>
@@ -44,7 +44,7 @@ client software via the homepage download link.</string>
     <key>MinimumVersion</key>
     <string>0.2.4</string>
     <key>ParentRecipe</key>
-    <string>com.github.autopkg.download.sookasa</string>
+    <string>com.github.autopkg.download.Sookasa</string>
     <key>Process</key>
     <array>
         <dict>

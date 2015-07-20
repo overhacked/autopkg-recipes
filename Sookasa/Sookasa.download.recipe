@@ -6,7 +6,7 @@
     <string>Downloads the latest version of the Sookasa
 client software via the homepage download link.</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.download.sookasa</string>
+    <string>com.github.autopkg.download.Sookasa</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
