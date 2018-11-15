@@ -27,7 +27,7 @@
 				<key>url</key>
 				<string>%SEARCH_URL%</string>
 				<key>re_pattern</key>
-				<string>href="(?P&lt;url&gt;%DOWNLOAD_URL%/Nextcloud-[^"]*\.pkg)"</string>
+				<string>href="(?P&lt;url&gt;%DOWNLOAD_URL%/Nextcloud-[^"]+\.pkg)[^"]*"</string>
 			</dict>
 		</dict>
 		<dict>
