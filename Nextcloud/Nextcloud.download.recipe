@@ -27,7 +27,7 @@
 				<key>url</key>
 				<string>%SEARCH_URL%</string>
 				<key>re_pattern</key>
-				<string>href="(?P&lt;url&gt;%DOWNLOAD_URL%/Nextcloud-[^"]+\.pkg)[^"]*"</string>
+				<string>\b(?P&lt;url&gt;https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-[^/'"&gt;\s]+\.pkg)\b</string>
 			</dict>
 		</dict>
 		<dict>
