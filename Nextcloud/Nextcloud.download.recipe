@@ -28,14 +28,6 @@
 				<string>%SEARCH_URL%</string>
 				<key>re_pattern</key>
 				<string>\b(?P&lt;url&gt;https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-[^/'"&gt;\s]+\.pkg)\b</string>
-				<!--
-					HTTP/2 still breaks some CDN endpoints,
-					causing recipe to fail
-				-->
-				<key>curl_opts</key>
-				<array>
-					<string>--http1.1</string>
-				</array>
 			</dict>
 		</dict>
 		<dict>
@@ -45,14 +37,6 @@
 			<dict>
 				<key>filename</key>
 				<string>%NAME%.pkg</string>
-				<!--
-					HTTP/2 still breaks some CDN endpoints,
-					causing recipe to fail
-				-->
-				<key>curl_opts</key>
-				<array>
-					<string>--http1.1</string>
-				</array>
 			</dict>
 		</dict>
 		<dict>
