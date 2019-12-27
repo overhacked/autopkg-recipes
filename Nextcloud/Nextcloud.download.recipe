@@ -9,34 +9,23 @@
 	<key>Input</key>
 	<dict>
 		<key>DOWNLOAD_URL</key>
-		<string>https://download.nextcloud.com/desktop/releases/Mac/Installer</string>
+		<string>https://download.nextcloud.com/desktop/releases/Mac/Installer/latest</string>
 		<key>NAME</key>
 		<string>Nextcloud</string>
-		<key>SEARCH_URL</key>
-		<string>https://nextcloud.com/install</string>
 	</dict>
 	<key>MinimumVersion</key>
-	<string>0.6.1</string>
+	<string>1.4</string>
 	<key>Process</key>
 	<array>
-		<dict>
-			<key>Processor</key>
-			<string>URLTextSearcher</string>
-			<key>Arguments</key>
-			<dict>
-				<key>url</key>
-				<string>%SEARCH_URL%</string>
-				<key>re_pattern</key>
-				<string>\b(?P&lt;url&gt;https://download.nextcloud.com/desktop/releases/Mac/Installer/Nextcloud-[^/'"&gt;\s]+\.pkg)\b</string>
-			</dict>
-		</dict>
 		<dict>
 			<key>Processor</key>
 			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
-				<key>filename</key>
-				<string>%NAME%.pkg</string>
+				<key>url</key>
+				<string>%DOWNLOAD_URL%</string>
+				<key>prefetch_filename</key>
+				<true/>
 			</dict>
 		</dict>
 		<dict>
