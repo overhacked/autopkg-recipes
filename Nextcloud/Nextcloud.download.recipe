@@ -8,8 +8,6 @@
 	<string>com.github.overhacked.download.Nextcloud</string>
 	<key>Input</key>
 	<dict>
-		<key>DOWNLOAD_URL</key>
-		<string>https://download.nextcloud.com/desktop/releases/Mac/Installer/latest</string>
 		<key>NAME</key>
 		<string>Nextcloud</string>
 	</dict>
@@ -18,15 +16,24 @@
 	<key>Process</key>
 	<array>
 		<dict>
-			<key>Processor</key>
-			<string>URLDownloader</string>
 			<key>Arguments</key>
 			<dict>
-				<key>url</key>
-				<string>%DOWNLOAD_URL%</string>
-				<key>prefetch_filename</key>
-				<true/>
+				<key>asset_regex</key>
+				<string>.*\.pkg$</string>
+				<key>github_repo</key>
+				<string>nextcloud/desktop</string>
 			</dict>
+			<key>Processor</key>
+			<string>GitHubReleasesInfoProvider</string>
+		</dict>
+		<dict>
+			<key>Arguments</key>
+			<dict>
+				<key>filename</key>
+				<string>%NAME%-%version%.pkg</string>
+			</dict>
+			<key>Processor</key>
+			<string>URLDownloader</string>
 		</dict>
 		<dict>
 			<key>Processor</key>
