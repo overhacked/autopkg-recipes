@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>github_repo</key>
-                <string>jwilm/alacritty</string>
+                <string>alacritty/alacritty</string>
                 <key>asset_regex</key>
                 <string>%NAME%-.+\.dmg</string>
             </dict>
